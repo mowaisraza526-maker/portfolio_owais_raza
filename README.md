@@ -9,12 +9,10 @@ npm run dev        # http://localhost:3000
 npm run build && npm start
 ```
 
-## Deploy to Vercel
-```bash
-npm i -g vercel
-vercel            # preview deployment
-vercel --prod     # production
-```
+## Deploy to Vercel (existing project: owais-raza-portfolio)
+Windows: double-click `deploy.cmd` (preview) or run `deploy.cmd prod` (production).
+macOS/Linux: `./deploy.sh` (preview) or `./deploy.sh prod` (production).
+The script installs dependencies, logs in if needed, links the project and deploys.
 Better: push this folder to a GitHub repo and import it in Vercel — every push then deploys automatically.
 
 ## Where things live
