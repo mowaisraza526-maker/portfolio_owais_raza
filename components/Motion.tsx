@@ -8,6 +8,7 @@ import { useEffect } from 'react';
  *  - [data-count]   → counts up once when visible
  *  - [data-parallax]→ gentle vertical drift (GSAP, desktop only)
  *  - [data-stack]   → earlier case-study cards scale back as the next one covers them (GSAP, desktop only)
+ *  - .marquee       → pause/play button, and the animation idles while off screen
  * Everything is skipped when the visitor prefers reduced motion.
  */
 export default function Motion() {
@@ -16,6 +17,18 @@ export default function Motion() {
     const reveals = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
     const counters = Array.from(document.querySelectorAll<HTMLElement>('[data-count]'));
     if (reduce) { reveals.forEach((el) => el.classList.add('is-in')); return; }
+
+    const marquee = document.querySelector<HTMLElement>('.marquee');
+    const toggle = document.querySelector<HTMLButtonElement>('[data-marquee-toggle]');
+    const onToggle = () => {
+      const paused = toggle!.getAttribute('aria-pressed') !== 'true';
+      toggle!.setAttribute('aria-pressed', String(paused));
+      toggle!.setAttribute('aria-label', paused ? 'Play brand scroll' : 'Pause brand scroll');
+      marquee?.toggleAttribute('data-paused', paused);
+    };
+    toggle?.addEventListener('click', onToggle);
+    const marqueeIO = new IntersectionObserver(([en]) => marquee?.toggleAttribute('data-offscreen', !en.isIntersecting));
+    if (marquee) marqueeIO.observe(marquee);
 
     const io = new IntersectionObserver((entries) => {
       entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
@@ -59,7 +72,7 @@ export default function Motion() {
       })();
     }
 
-    return () => { io.disconnect(); countIO.disconnect(); revert?.(); };
+    return () => { io.disconnect(); countIO.disconnect(); marqueeIO.disconnect(); toggle?.removeEventListener('click', onToggle); revert?.(); };
   }, []);
   return null;
 }

@@ -2,11 +2,12 @@ import Image from 'next/image';
 import { site, heroStats } from '@/content/site';
 import { delay } from '@/lib/utils';
 import Button from './Button';
-import { GitHub, LinkedIn, Mail } from './Icons';
+import { GitHub, LinkedIn, Mail, WhatsApp } from './Icons';
 
 const socials = [
   { label: 'LinkedIn', href: site.linkedin, Icon: LinkedIn, external: true },
   { label: 'GitHub', href: site.github, Icon: GitHub, external: true },
+  { label: 'WhatsApp', href: site.whatsapp, Icon: WhatsApp, external: true },
   { label: 'Email', href: `mailto:${site.email}`, Icon: Mail, external: false },
 ];
 
@@ -16,7 +17,7 @@ export default function Hero() {
       <div className="wrap grid items-center gap-10 lg:grid-cols-12 lg:gap-8">
         <div className="lg:col-span-5">
           <p className="rise text-lg text-ink" style={delay(0)}>Hey there. I’m</p>
-          <h1 className="rise mt-2 text-[clamp(2.9rem,5.4vw,4.6rem)] font-semibold leading-[0.98] tracking-[-0.035em]" style={delay(90)}>
+          <h1 className="rise-lcp mt-2 text-[clamp(2.9rem,5.4vw,4.6rem)] font-semibold leading-[0.98] tracking-[-0.035em]" >
             <span className="block text-ink">{site.first}</span>
             <span className="tone-2 block">{site.last}</span>
           </h1>
@@ -36,7 +37,7 @@ export default function Hero() {
               <ul className="absolute right-3 top-3 flex flex-col gap-2">
                 {socials.map(({ label, href, Icon, external }) => (
                   <li key={label}>
-                    <a href={href} aria-label={label} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="grid h-10 w-10 place-items-center rounded-full bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-accent hover:text-white">
+                    <a href={href} aria-label={external ? `${label} (opens in a new tab)` : label} {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})} className="grid h-10 w-10 place-items-center rounded-full bg-paper/90 text-ink backdrop-blur transition-colors hover:bg-accent hover:text-white">
                       <Icon width={18} height={18} />
                     </a>
                   </li>

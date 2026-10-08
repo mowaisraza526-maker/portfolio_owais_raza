@@ -1,20 +1,21 @@
 import { cta, site } from '@/content/site';
 import Button from './Button';
-import { Download, Mail } from './Icons';
+import { Download, Mail, WhatsApp } from './Icons';
 
 export default function CtaBanner() {
   return (
     <section aria-label="Contact call to action" className="py-20 md:py-24">
       <div className="wrap">
         <div className="relative overflow-hidden rounded-[32px] bg-ink p-8 text-cream sm:p-12">
-          <div aria-hidden="true" className="absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/90 blur-[2px]" />
-          <div aria-hidden="true" className="absolute -right-4 top-24 h-40 w-40 rounded-full bg-cream/10" />
-          <div className="relative max-w-2xl">
+          <div aria-hidden="true" className="absolute -right-20 -top-20 hidden h-72 w-72 rounded-full bg-accent/90 blur-[2px] lg:block" />
+          <div aria-hidden="true" className="absolute -right-4 top-24 hidden h-40 w-40 rounded-full bg-cream/10 lg:block" />
+          <div className="relative max-w-2xl lg:max-w-[38rem]">
             <h2 className="text-[clamp(2rem,4.4vw,3.2rem)] font-medium leading-[1.05] tracking-[-0.03em] !text-cream">{cta.heading}</h2>
             <p className="mt-4 max-w-lg text-lg text-on-dark">{cta.text}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={`mailto:${site.email}`} variant="accent" icon={<Mail width={16} height={16} />}>Email me</Button>
-              <Button href={site.resume} variant="cream" download icon={<Download width={16} height={16} />}>Download resume</Button>
+              <Button href={site.whatsapp} external variant="cream" icon={<WhatsApp width={16} height={16} />}>WhatsApp</Button>
+              <Button href={site.resume} variant="ghost" download icon={<Download width={16} height={16} />}>Download resume</Button>
             </div>
           </div>
           <dl className="relative mt-12 flex gap-10 border-t border-white/15 pt-6">

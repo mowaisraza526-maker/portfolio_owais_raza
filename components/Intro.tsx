@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { intro, site } from '@/content/site';
 import Button from './Button';
-import { Mail, Phone } from './Icons';
+import { Mail, Phone, WhatsApp } from './Icons';
 
 export default function Intro() {
   return (
@@ -15,7 +15,11 @@ export default function Intro() {
           <ul className="mt-9 flex flex-wrap gap-x-10 gap-y-5">
             <li className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-full bg-accent text-white"><Phone width={18} height={18} /></span>
-              <span><span className="block text-sm text-on-dark">Call today</span><a href={site.phoneHref} className="font-medium text-cream hover:text-white">{site.phone}</a></span>
+              <span><span className="block text-sm text-on-dark">Call</span><a href={site.phoneHref} className="font-medium text-cream hover:text-white">{site.phone}</a></span>
+            </li>
+            <li className="flex items-center gap-3">
+              <span className="grid h-11 w-11 place-items-center rounded-full bg-accent text-white"><WhatsApp width={18} height={18} /></span>
+              <span><span className="block text-sm text-on-dark">WhatsApp</span><a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="font-medium text-cream hover:text-white">Message me<span className="sr-only"> (opens in a new tab)</span></a></span>
             </li>
             <li className="flex items-center gap-3">
               <span className="grid h-11 w-11 place-items-center rounded-full bg-accent text-white"><Mail width={18} height={18} /></span>
