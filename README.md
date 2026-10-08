@@ -18,13 +18,15 @@ Better: push this folder to a GitHub repo and import it in Vercel — every push
 ## Where things live
 | What | File |
 |---|---|
-| All copy: bio, stats, services, projects, case studies, skills, experience | `content/site.ts` |
+| All copy: bio, stats, services, projects, case studies, skills, experience, WhatsApp link, SEO title | `content/site.ts` |
 | Colours (resume palette) and motion timings | `app/globals.css` (`:root` tokens) |
 | Fonts | `app/layout.tsx` (Inter Tight via `next/font`) |
 | Scroll reveal, counters, parallax, stacking cards | `components/Motion.tsx` |
 | Section components | `components/*.tsx` |
 | Images | `public/images/*.webp` |
 | Resume PDFs | `public/docs/` |
+| Social share image (1200×630), app icons | `public/og.jpg`, `public/icon-*.png`, `app/apple-icon.png` |
+| Security + cache headers, image formats (AVIF/WebP) | `next.config.mjs` |
 
 ## Change the colours
 Edit the RGB triplets in `:root` in `app/globals.css`. Nothing is hard-coded in components.
@@ -34,6 +36,7 @@ Edit the RGB triplets in `:root` in `app/globals.css`. Nothing is hard-coded in 
 2. Add `image`, `alt`, `w`, `h` to the project in `content/site.ts`. The Lux Style Awards tile is a typographic placeholder until you add one.
 
 ## Checks run before delivery
-- `next build` passes (types + lint), first-load JS about 98 kB.
-- axe-core (WCAG 2 A/AA + best practices): 0 violations.
+- `next build` passes (types + lint), first-load JS about 99 kB.
+- Lighthouse (mobile): Performance 97–99, Accessibility 100, Best Practices 100, SEO 100.
+- axe-core (WCAG 2.2 A/AA + best practices): 0 violations at 390px and 1440px.
 - No horizontal scroll at 390px and 1440px; `prefers-reduced-motion` respected.

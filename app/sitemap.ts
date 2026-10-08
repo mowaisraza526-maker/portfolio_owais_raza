@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { site } from '@/content/site';
+// Only indexable pages belong here (/style-guide is noindex).
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  return [{ url: site.url, lastModified: now, priority: 1 }, { url: `${site.url}/style-guide`, lastModified: now, priority: 0.2 }];
+  return [{ url: site.url, lastModified: new Date(), changeFrequency: 'monthly', priority: 1 }];
 }

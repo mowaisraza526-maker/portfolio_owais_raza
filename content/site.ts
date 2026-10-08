@@ -11,14 +11,17 @@ export const site = {
   email: 'mowaisraza526@gmail.com',
   phone: '+92 313 1513035',
   phoneHref: 'tel:+923131513035',
+  whatsapp: 'https://wa.me/923131513035?text=Hi%20Owais%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.',
+  timezone: 'PKT (UTC+5)',
   location: 'Karachi, Pakistan',
   linkedin: 'https://www.linkedin.com/in/muhammad-owais-raza-963885219',
   github: 'https://github.com/mowaisraza526-maker',
   resume: '/docs/Muhammad-Owais-Raza-Resume.pdf',
   resumeAts: '/docs/Muhammad-Owais-Raza-Resume-ATS.pdf',
+  title: 'Muhammad Owais Raza | Frontend & WordPress Developer in Karachi, Pakistan',
   description:
-    'Frontend & WordPress developer in Karachi with 4+ years of full-time experience. Responsive UI, Figma-to-code, WordPress/WooCommerce, Shopify themes, performance and technical SEO.',
-  status: 'Open to new opportunities',
+    'Frontend & WordPress developer in Karachi, Pakistan with 4+ years of experience. Figma-to-code, WordPress/WooCommerce, Shopify themes, Core Web Vitals and technical SEO.',
+  status: 'Open to remote and on-site roles',
 };
 
 export const nav = [
@@ -37,7 +40,7 @@ export const heroStats = {
   sub: '15+ live today, 8+ in active maintenance',
 };
 
-export const brands = ['Dawlance', 'Shan Foods', 'Lux', "Pond's", 'Sunsilk', 'TRESemmé', 'Doritos', 'Lipton', 'Red Bull', 'Dalda'];
+export const brands = ['Dawlance', 'Shan Foods', 'Lux', 'Pond’s', 'Sunsilk', 'TRESemmé', 'Doritos', 'Lipton', 'Red Bull', 'Dalda'];
 
 export const intro = {
   heading:
@@ -178,7 +181,7 @@ export const experience = [
 
 export const education = [
   { title: 'Web Development Certification', place: 'Infra', detail: '6 months · 2022' },
-  { title: 'Intermediate (Arts)', place: 'Govt. Degree Boys College Baldia Town Sector 4E, Karachi', detail: '2022' },
+  { title: 'Intermediate (HSSC), Arts', place: 'Govt. Degree Boys College Baldia Town Sector 4E, Karachi', detail: '2022' },
 ];
 
 export const learning =
@@ -186,5 +189,5 @@ export const learning =
 
 export const cta = {
   heading: 'Have a project or role in mind?',
-  text: 'I’m open to frontend and WordPress opportunities. Send a message and I’ll reply with next steps.',
+  text: 'I’m open to frontend and WordPress roles (remote, hybrid or on-site in Karachi) and freelance projects for clients worldwide. Email or WhatsApp me and I’ll reply with next steps.',
 };

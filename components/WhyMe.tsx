@@ -18,7 +18,7 @@ export default function WhyMe() {
             const on = active === i;
             return (
               <li key={s.title} data-reveal style={delay(i * 110)} data-active={on} className="hx-card rounded-3xl border" onMouseEnter={() => setActive(i)}>
-                <button type="button" aria-expanded={on} onClick={() => setActive(i)} onFocus={() => setActive(i)} className="flex h-full min-h-[300px] w-full flex-col justify-between gap-10 p-6 text-left lg:min-h-[340px]">
+                <button type="button" aria-expanded={on} onClick={() => setActive(i)} onFocus={() => setActive(i)} className="flex h-full w-full flex-col justify-between gap-6 p-6 text-left lg:min-h-[340px] lg:gap-10">
                   <span className={`grid h-12 w-12 place-items-center rounded-full transition-colors duration-500 ${on ? 'bg-accent text-white' : 'bg-cream text-ink'}`}><Icon /></span>
                   <span>
                     <span className="block break-words text-[1.35rem] font-medium leading-tight tracking-[-0.02em] text-ink [hyphens:auto]">{s.title}</span>

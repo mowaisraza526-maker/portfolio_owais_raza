@@ -18,7 +18,7 @@ function Tile({ p }: { p: Project }) {
           View<br />site
         </span>
       ) : (
-        <span className="absolute left-3 top-3 rounded-full bg-paper/95 px-3 py-1 text-xs font-medium text-ink">Private beta</span>
+        <span className="absolute bottom-3 right-3 rounded-full bg-ink px-3 py-1 text-xs font-medium text-cream">Private beta</span>
       )}
     </div>
   );
@@ -40,7 +40,7 @@ export default function Works() {
   return (
     <section id="work" aria-labelledby="work-title" className="py-20 md:py-28">
       <div className="wrap">
-        <SectionHeader id="work-title" label="Selected work" a="My recent" b="works" text="Live sites and internal products I built or contributed to." />
+        <SectionHeader id="work-title" label="Selected work" a="My recent" b="work" text="Live sites and internal products I built or contributed to." />
         <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2">
           {projects.map((p, i) => (
             <li key={p.slug} data-reveal style={delay((i % 2) * 120)}>
