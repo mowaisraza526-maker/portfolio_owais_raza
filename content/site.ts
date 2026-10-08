@@ -95,18 +95,18 @@ export const strengths = [
 export const ctaStrip = 'Have a design that needs to ship fast, responsive and pixel-accurate? Let’s build it.';
 
 export type Project = {
-  slug: string; title: string; category: string; stack: string; url?: string; image?: string; alt?: string; w?: number; h?: number; note?: string;
+  slug: string; title: string; category: string; stack: string; role: string; url?: string; image?: string; alt?: string; w?: number; h?: number; note?: string;
 };
 
 export const projects: Project[] = [
-  { slug: 'tms-people', title: 'TMS People', category: 'Internal HRMS', stack: 'Vue.js, Laravel, Tailwind CSS, Vite', image: '/images/tms-people.webp', alt: 'TMS People HRMS dashboard with attendance charts', w: 1280, h: 800, note: 'Private beta' },
-  { slug: 'hrsi', title: 'HRSI', category: 'Custom WordPress', stack: 'WordPress, PHP, ACF, GSAP', url: 'https://hrsi.teamreactivate.com.pk/', image: '/images/hrsi.webp', alt: 'HRSI homepage hero', w: 1280, h: 800 },
-  { slug: 'shan-foods', title: 'Shan Foods', category: 'Multilingual WordPress', stack: 'WordPress, multilingual UI', url: 'https://www.shanfoods.com/', image: '/images/shanfoods.webp', alt: 'Shan Foods homepage', w: 1280, h: 800 },
-  { slug: 'makebranded', title: 'MakeBranded', category: 'Platform + blog', stack: 'Laravel frontend, WordPress', url: 'https://makebranded.com/', image: '/images/makebranded.webp', alt: 'MakeBranded QR code generator homepage', w: 1280, h: 747 },
-  { slug: 'bento-kids', title: 'Bento Kids', category: 'Shopify store', stack: 'Shopify, Liquid, metafields', url: 'https://bentokid.com/', image: '/images/bentokid.webp', alt: 'Bento Kids Shopify homepage', w: 1280, h: 800 },
-  { slug: 'dawlance-prima', title: 'Dawlance Prima Catalogue', category: 'Interactive catalogue', stack: 'HTML, SCSS, JavaScript, Angular rebuild', url: 'https://prima-line-catalog.vercel.app/', image: '/images/dawlance.webp', alt: 'Dawlance Prima range showroom menu', w: 1280, h: 800, note: 'Angular demo' },
-  { slug: 'team-reactivate', title: 'Team Reactivate Beta', category: 'Agency website', stack: 'WordPress, custom frontend, GSAP', url: 'https://beta.teamreactivate.com.pk/', image: '/images/teamreactivate.webp', alt: 'Team Reactivate beta website hero', w: 1280, h: 800 },
-  { slug: 'lux-style', title: 'Lux Style Awards', category: 'Website + jury portal', stack: 'WordPress, JavaScript', url: 'https://www.luxstyle.pk/', note: 'Four annual cycles, 2022–2025' },
+  { slug: 'tms-people', role: 'Frontend owner, end to end', title: 'TMS People', category: 'Internal HRMS', stack: 'Vue.js, Laravel, Tailwind CSS, Vite', image: '/images/tms-people.webp', alt: 'TMS People HRMS dashboard with attendance charts', w: 1280, h: 800, note: 'Private beta' },
+  { slug: 'hrsi', role: 'Complete frontend from supplied designs · Lighthouse 94 mobile, 100 SEO', title: 'HRSI', category: 'Custom WordPress', stack: 'WordPress, PHP, ACF, GSAP', url: 'https://hrsi.teamreactivate.com.pk/', image: '/images/hrsi.webp', alt: 'HRSI homepage hero', w: 1280, h: 800 },
+  { slug: 'shan-foods', role: 'Responsive multilingual UI and ongoing maintenance', title: 'Shan Foods', category: 'Multilingual WordPress', stack: 'WordPress, multilingual UI', url: 'https://www.shanfoods.com/', image: '/images/shanfoods.webp', alt: 'Shan Foods homepage', w: 1280, h: 800 },
+  { slug: 'makebranded', role: 'Frontend + optimization · Lighthouse 98 mobile / 99 desktop', title: 'MakeBranded', category: 'Platform + blog', stack: 'Laravel frontend, WordPress', url: 'https://makebranded.com/', image: '/images/makebranded.webp', alt: 'MakeBranded QR code generator homepage', w: 1280, h: 747 },
+  { slug: 'bento-kids', role: 'Theme sections, metafields, cart UI and publishing', title: 'Bento Kids', category: 'Shopify store', stack: 'Shopify, Liquid, metafields', url: 'https://bentokid.com/', image: '/images/bentokid.webp', alt: 'Bento Kids Shopify homepage', w: 1280, h: 800 },
+  { slug: 'dawlance-prima', role: 'Production frontend from Figma, then an Angular rebuild', title: 'Dawlance Prima Catalogue', category: 'Interactive catalogue', stack: 'HTML, SCSS, JavaScript, Angular rebuild', url: 'https://prima-line-catalog.vercel.app/', image: '/images/dawlance.webp', alt: 'Dawlance Prima range showroom menu', w: 1280, h: 800, note: 'Angular demo' },
+  { slug: 'team-reactivate', role: 'Frontend end to end · Lighthouse 100 SEO and accessibility', title: 'Team Reactivate Beta', category: 'Agency website', stack: 'WordPress, custom frontend, GSAP', url: 'https://beta.teamreactivate.com.pk/', image: '/images/teamreactivate.webp', alt: 'Team Reactivate beta website hero', w: 1280, h: 800 },
+  { slug: 'lux-style', role: 'Public site UI updates; owned the jury portal frontend', title: 'Lux Style Awards', category: 'Website + jury portal', stack: 'WordPress, JavaScript', url: 'https://www.luxstyle.pk/', note: 'Four annual cycles, 2022–2025' },
 ];
 
 export const cases = [

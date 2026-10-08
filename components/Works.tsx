@@ -31,7 +31,8 @@ function Meta({ p }: { p: Project }) {
         <h3 className="text-[1.3rem] font-medium tracking-[-0.015em] text-ink">{p.title}</h3>
         <span className="shrink-0 text-sm text-muted">{p.category}</span>
       </div>
-      <p className="mt-1 text-[0.95rem] text-muted">{p.stack}{p.note ? ` · ${p.note}` : ''}</p>
+      <p className="mt-1.5 text-[0.95rem] text-ink"><span className="font-medium">My role:</span> {p.role}</p>
+      <p className="mt-0.5 text-[0.95rem] text-muted">{p.stack}{p.note ? ` · ${p.note}` : ''}</p>
     </div>
   );
 }
@@ -40,7 +41,7 @@ export default function Works() {
   return (
     <section id="work" aria-labelledby="work-title" className="py-20 md:py-28">
       <div className="wrap">
-        <SectionHeader id="work-title" label="Selected work" a="My recent" b="work" text="Live sites and internal products I built or contributed to." />
+        <SectionHeader id="work-title" label="Selected work" a="My recent" b="work" text="Live sites and internal products I built or contributed to, with my role on each." />
         <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2">
           {projects.map((p, i) => (
             <li key={p.slug} data-reveal style={delay((i % 2) * 120)}>
